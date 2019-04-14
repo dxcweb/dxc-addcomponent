@@ -1,14 +1,13 @@
 import * as React from 'react';
-
-declare type ConfigContent = React.ReactNode | string;
-declare type ConfigDuration = number | (() => void);
-export declare type ConfigOnClose = () => void;
-export interface MessageApi {
-  info(content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose);
-  success(content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose);
-  error(content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose);
-  warn(content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose);
-  warning(content: ConfigContent, duration?: ConfigDuration, onClose?: ConfigOnClose);
+export interface AddcomponentApi {
+  /**
+   * 添加组件返回 key
+   */
+  add(component: React.ReactNode):Number;
+  /**
+   * 移除组件使用add返回的key
+   */
+  remove(key:Number):void;
 }
-
-export default MessageApi;
+declare const _default: AddcomponentApi;
+export default _default;
