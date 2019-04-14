@@ -29,10 +29,13 @@ export default {
 使用  
 
 ```
-import loading from './loading'
+import loading from './loading';
 
-loading.show()
-loading.hide()
+// 显示 Loading
+loading.show();
+
+// 隐藏 Loading
+loading.hide();
 ```
 
 
