@@ -1,0 +1,44 @@
+{
+  "name": "dxc-addcomponent",
+  "version": "1.0.0",
+  "description": "使用函数来添加组件。",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/dxcweb/dxc-addcomponent",
+  "maitainers": [
+    "dxcweb@qq.com"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dxcweb/dxc-addcomponent.git"
+  },
+  "licenses": "MIT",
+  "config": {
+    "port": 8200
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "es": "rc-tools run es",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run update-self && rc-tools run pub",
+    "lint": "rc-tools run lint",
+    "prepublish": "rc-tools run guard"
+  },
+  "devDependencies": {
+    "rc-tools": "^7.0.7",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "dependencies": {},
+  "typings": "./typings/index.d.ts",
+  "files": [
+    "assets",
+    "examples",
+    "lib",
+    "src",
+    "typings"
+  ],
+  "main": "./lib"
+}
