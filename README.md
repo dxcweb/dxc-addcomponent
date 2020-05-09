@@ -3,41 +3,10 @@ dxc-addcomponent使用函数来快速添加react组件
 ## install
 ```
 yarn add dxc-addcomponent
-```
+
 ## Example
-loading.js
-
 ```
-import React, {Component, PropTypes} from 'react';
-import addComponent from 'dxc-addcomponent'
-import Loading from './Loading'
-let key = null;
-export default {
-    show: (props = {})=> {
-        if (key == null)
-            key = addComponent.add(<Loading {...props}/>)
-    },
-    hide: ()=> {
-        if (key != null) {
-            addComponent.remove(key);
-            key = null;
-        }
-    }
-}
-
+addComponent((remove) => {
+      return <div onClick={remove}>点击关闭</div>;
+});
 ```
-
-使用  
-
-```
-import loading from './loading';
-
-// 显示 Loading
-loading.show();
-
-// 隐藏 Loading
-loading.hide();
-```
-
-
-
