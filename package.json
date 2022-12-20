@@ -1,6 +1,6 @@
 {
   "name": "dxc-addcomponent",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "使用函数来添加组件。",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "pub":"npm publish",
+    "pub": "npm publish",
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
@@ -22,7 +22,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.x"
+    "react": "18.x"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -37,8 +37,8 @@
     "nwb": "0.24.x",
     "nwb-less": "^0.8.0",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "author": "",
   "homepage": "",
@@ -46,5 +46,8 @@
   "repository": "",
   "keywords": [
     "react-component"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }

@@ -1,12 +1,10 @@
-import { createRoot } from "react-dom/client";
+import ReactDom from "react-dom";
 
-const roots = {};
 const _elements = {};
 
 const _createRemoveHandler = (key) => () => {
-  if (!roots[key]) return;
-  roots[key].unmount();
-  delete roots[key];
+  if (!_elements[key]) return;
+  ReactDom.unmountComponentAtNode(_elements[key]);
   _elements[key].parentNode.removeChild(_elements[key]);
   delete _elements[key];
 };
@@ -14,8 +12,7 @@ const _createRemoveHandler = (key) => () => {
 export default function addComponent(callback) {
   const key = Symbol();
   _elements[key] = document.createElement("div");
-  document.body.appendChild(_elements[key]);
   const element = callback(_createRemoveHandler(key));
-  roots[key] = createRoot(_elements[key]);
-  roots[key].render(element);
+  document.body.appendChild(_elements[key]);
+  ReactDom.render(element, _elements[key]);
 }

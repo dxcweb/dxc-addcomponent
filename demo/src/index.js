@@ -3,6 +3,7 @@ import { render } from "react-dom";
 
 import addComponent from "../../src";
 
+console.log(7771, addComponent);
 export default class Demo extends Component {
   onClick = () => {
     addComponent((remove) => {
